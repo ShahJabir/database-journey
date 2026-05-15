@@ -1,0 +1,11 @@
+-- ──────────────────────────────────────────
+-- Auto-run on first container startup only.
+-- The default DB (POSTGRES_DB) is already
+-- created by the entrypoint, so we only need
+-- to create the two extra databases here.
+-- ──────────────────────────────────────────
+ 
+-- Case-sensitive name requires double quotes
+CREATE DATABASE "MyDatabase";
+ 
+CREATE DATABASE "salesdb";
