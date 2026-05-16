@@ -96,3 +96,8 @@ UPDATE users SET email = 'georg@email.com'  WHERE id = 3;
 UPDATE users SET email = 'martin@email.com' WHERE id = 4;
 UPDATE users SET email = 'peter@email.com'  WHERE id = 5;
 
+-- ======================================================
+-- CRUD: Delete Data using SQL Query
+-- ======================================================
+
+DROP TABLE IF EXISTS not_exists;
