@@ -77,8 +77,22 @@ CREATE TABLE users (
 );
 
 INSERT INTO users (id, person_name, birth_date, phone) VALUES
-    (1, 'Maria', '2001-01-11', 01000000000),
-    (2, 'John', '2002-12-23', 01234567890),
-    (3, 'Georg', '2003-03-21', 01888888888),
-    (4, 'Martin', '2001-05-09', 01987654321),
-    (5, 'Peter', '2002-01-11', 01098123475);
+    (1, 'Maria',  '2001-01-11', '01000000000'),
+    (2, 'John',   '2002-12-23', '01234567890'),
+    (3, 'Georg',  '2003-03-21', '01888888888'),
+    (4, 'Martin', '2001-05-09', '01987654321'),
+    (5, 'Peter',  '2002-01-11', '01098123475');
+
+-- ======================================================
+-- CRUD: Update Data using SQL Query
+-- ======================================================
+
+ALTER TABLE users
+ADD email VARCHAR(50) NOT NULL DEFAULT 'unknown@email.com';
+
+UPDATE users SET email = 'maria@email.com'  WHERE id = 1;
+UPDATE users SET email = 'john@email.com'   WHERE id = 2;
+UPDATE users SET email = 'georg@email.com'  WHERE id = 3;
+UPDATE users SET email = 'martin@email.com' WHERE id = 4;
+UPDATE users SET email = 'peter@email.com'  WHERE id = 5;
+
