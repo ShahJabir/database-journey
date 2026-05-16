@@ -14,4 +14,3 @@ services:
       DOZZLE_ENABLE_ACTIONS: true # allow start/stop/restart from UI
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock:ro # read-only Docker socket for accessing host containers
-    network_mode: host # use host network to see all containers
