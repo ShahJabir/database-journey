@@ -42,3 +42,10 @@ WHERE country = 'USA' OR country <> 'UK';
 
 SELECT * FROM customers
 WHERE NOT country = 'USA';
+
+-- ======================================================
+-- Filtering: Range Operators
+-- ======================================================
+
+SELECT * FROM customers
+WHERE score BETWEEN 100 AND 500;
