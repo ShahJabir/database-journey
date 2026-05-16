@@ -63,3 +63,22 @@ FROM orders;
 
 SELECT first_name, 'New Customer' AS status
 FROM customers;
+
+-- ======================================================
+-- CRUD: Create Data using SQL Query
+-- ======================================================
+
+CREATE TABLE users (
+    id INT NOT NULL,
+    person_name VARCHAR(50) NOT NULL,
+    birth_date DATE,
+    phone VARCHAR(15) NOT NULL,
+    CONSTRAINT pk_users PRIMARY KEY (id)
+);
+
+INSERT INTO users (id, person_name, birth_date, phone) VALUES
+    (1, 'Maria', '2001-01-11', 01000000000),
+    (2, 'John', '2002-12-23', 01234567890),
+    (3, 'Georg', '2003-03-21', 01888888888),
+    (4, 'Martin', '2001-05-09', 01987654321),
+    (5, 'Peter', '2002-01-11', 01098123475);
