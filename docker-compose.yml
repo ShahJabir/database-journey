@@ -1,0 +1,17 @@
+services:
+  # ──────────────────────────────────────────────
+  # Dozzle – Real-time Docker Log & Metrics Viewer
+  # ──────────────────────────────────────────────
+  dozzle:
+    image: amir20/dozzle:latest
+    container_name: dozzle
+    restart: unless-stopped
+    ports:
+      - "8888:8080"
+    environment:
+      DOZZLE_LEVEL: info # log level: debug | info | warn | error
+      DOZZLE_TAILSIZE: 300 # lines of history shown on connect
+      DOZZLE_ENABLE_ACTIONS: true # allow start/stop/restart from UI
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock:ro # read-only Docker socket for accessing host containers
+    network_mode: host # use host network to see all containers
