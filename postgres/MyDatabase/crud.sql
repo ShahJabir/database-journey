@@ -101,3 +101,4 @@ UPDATE users SET email = 'peter@email.com'  WHERE id = 5;
 -- ======================================================
 
 DROP TABLE IF EXISTS not_exists;
+DELETE FROM users WHERE id = 5;
