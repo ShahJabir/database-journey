@@ -90,3 +90,4 @@ Numeric Functions - ABS
 SELECT -10 AS original_number,
        ABS(-10) AS negetive_number,
        ABS(10) AS positive_number;
+
