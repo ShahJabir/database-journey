@@ -72,3 +72,21 @@ String Function - String Extraction - SubString
 SELECT first_name,
        SUBSTRING(TRIM(first_name), 2, LENGTH(first_name)) AS sub_name
 FROM customers;
+
+
+/*
+Numeric Functions - Round
+*/
+
+SELECT 3.516 AS original_number,
+       ROUND(3.516, 2) AS round_2,
+       ROUND(3.516, 1) AS round_1,
+       ROUND(3.516, 0) AS round_0;
+
+/*
+Numeric Functions - ABS
+*/
+
+SELECT -10 AS original_number,
+       ABS(-10) AS negetive_number,
+       ABS(10) AS positive_number;
