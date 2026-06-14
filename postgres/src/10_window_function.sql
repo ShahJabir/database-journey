@@ -21,3 +21,11 @@ SELECT
     SUM(sales) OVER() total_sales,
     RANK() OVER(ORDER BY sales DESC)
 FROM sales.orders;
+
+SELECT
+    orderid,
+    orderdate,
+    productid,
+    sales,
+    SUM(sales) OVER(PARTITION BY productid ORDER BY orderdate ROWS BETWEEN UNBOUNDED PRECEDING AND UNBOUNDED FOLLOWING) total_sales_by_products
+FROM sales.orders;
